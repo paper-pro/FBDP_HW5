@@ -3,4 +3,5 @@
 /out
 /stop
 /target
-!/target/*.class
+!/target/classes/*.class
+/src/main/java/META-INF
