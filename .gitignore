@@ -2,6 +2,5 @@
 /.idea
 /out
 /stop
-/target
-!/target/classes/*.class
-/src/main/java/META-INF
+!*.class
+META-INF/
