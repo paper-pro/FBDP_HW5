@@ -1,0 +1,6 @@
+/input
+/.idea
+/out
+/stop
+/target
+!/target/*.class
