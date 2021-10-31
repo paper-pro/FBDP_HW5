@@ -6,9 +6,9 @@
 2. 伪分布模式
 3. 集群模式
 
-​		这篇教程[Hadoop: Intellij结合Maven本地运行和调试MapReduce程序 (无需搭载Hadoop和HDFS环境) - Penguin (polarxiong.com)](https://www.polarxiong.com/archives/Hadoop-Intellij结合Maven本地运行和调试MapReduce程序-无需搭载Hadoop和HDFS环境.html)表示，运行和调试MapReduce程序只需要有相应的Hadoop依赖包就行，可以完全当成一个普通的JAVA程序，不过其主要不足就在于没有Hadoop的整个管理控制系统，如JobTracker面板，而只是用来运行和调试程序；而其优点就在于开发调试方便，***\*编写的程序通常不需要修改即可在真实的分布式Hadoop集群下运行\****。当然有这么方便的事情肯定会想直接尝试，不过还是有一丝犹豫的，毕竟完成代码测试后就是在docker上的HADOOP集群上跑了，那我之前在WSL上搭的单机和伪分布式HADOOP就毫无价值了吗？
+​		这篇教程[Hadoop: Intellij结合Maven本地运行和调试MapReduce程序 (无需搭载Hadoop和HDFS环境) - Penguin (polarxiong.com)](https://www.polarxiong.com/archives/Hadoop-Intellij结合Maven本地运行和调试MapReduce程序-无需搭载Hadoop和HDFS环境.html)表示，运行和调试MapReduce程序只需要有相应的Hadoop依赖包就行，可以完全当成一个普通的JAVA程序，不过其主要不足就在于没有Hadoop的整个管理控制系统，如JobTracker面板，而只是用来运行和调试程序；而其优点就在于开发调试方便，***\*编写的程序通常不需要修改即可在真实的分布式Hadoop集群下运行\****。当然有这么方便的事情肯定会想直接尝试，不过还是有一丝犹豫的，毕竟完成代码测试后就是在docker上的HADOOP集群上跑了，那我之前在WSL上搭的单机和伪分布式HADOOP就毫无价值了吗？（后面还是用上了）
 
-​		文中stop文件夹在input同级目录下。
+​		文中stop文件夹包含两个停用文件，在input同级目录下。src中，主程序是WordCount2.java，实际上就是WordCount3.0，是基于官网教程的WordCount2.0改的，就顺手没有修改文件名。MiscUtils.java和MyOutPutFormat.java分别是协助实现WordCount3.0的新写方法和重写类，剩下的WordCount.java和WordCount2_sample.java的作用主要是来存目，保留官网代码和新写的比对学习，并不参与最终运行。
 
 ### 1.IDEA单机模式测试WordCount1&2
 
