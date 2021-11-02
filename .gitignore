@@ -3,6 +3,6 @@
 /out
 /stop
 /target
-!/target/classes/*.jar
+!./target/classes/*.jar
 META-INF/
 
