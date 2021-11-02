@@ -3,5 +3,5 @@
 /out
 /stop
 /target
-!/target/classes/*.jar
+!/target/classes/wc3.jar
 META-INF/
